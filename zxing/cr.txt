@@ -1,0 +1,62 @@
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:jackson-databind-2.15.2.jar" BarcodeFoodScannerApp.java
+
+to compile
+
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:jackson-databind-2.15.2.jar" BarcodeFoodScannerApp
+
+
+to run
+
+
+for google
+
+
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar" BarcodeGoogleScannerApp.java   
+compile
+
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar" BarcodeGoogleScannerApp
+run
+
+
+ethical 
+
+# Compile
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp.java
+
+# Run
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp
+
+final
+
+# Compile
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp.java
+
+# Run
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp
+
+
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp.java
+
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp
+
+
+compile
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:commons-text-1.10.0.jar" BarcodeEthicalScannerApp.java
+
+
+run
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:commons-text-1.10.0.jar" BarcodeEthicalScannerApp
+
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar" BarcodeEthicalScannerImageGUI.java
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar" BarcodeEthicalScannerImageGUI
+
+
+
+
+api
+
+AIzaSyDgkQ4RWoX1Kvn9GcusxSadR9B4PvVpuQo
+
+cse
+
+c05a0c9e0acc247d8
