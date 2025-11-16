@@ -1,8 +1,9 @@
+
 /* BarcodeScanner.module.css */
 
 .container {
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    background: linear-gradient(to bottom right, #344e4c, #496e5b);
     padding: 2rem 1rem;
   }
   
@@ -14,26 +15,33 @@
   .header {
     /* text-center; */
     margin-bottom: 2rem;
+    
   }
   
   .title {
     font-size: 2.25rem;
     font-weight: bold;
-    color: #1f2937;
+    color: #e8fafe;
     margin-bottom: 0.5rem;
   }
   
   .subtitle {
-    color: #4b5563;
+    color: #80b1bb;
   }
   
   /* Upload Section */
   .uploadCard {
-    background: white;
+    background: #afe3ee;
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    background-image: radial-gradient(
+        circle at 40% 40%,
+        rgba(115, 218, 112, 0.4) 0%,   /* deep purple, semi-transparent */
+        rgba(100, 174, 176, 0.3) 70%, /* soft blue, semi-transparent */
+        rgba(188, 203, 212, 0.712) 100% /* light overlay */
+    );
   }
   
   .uploadLabel {
@@ -48,6 +56,8 @@
     padding: 2rem;
     text-align: center;
     transition: all 0.2s;
+    background-color: #e1edef; 
+    
   }
   
   .uploadArea:hover {
@@ -70,7 +80,7 @@
   
   .resetButton {
     padding: 0.5rem 1rem;
-    background-color: #e5e7eb;
+    background-color: #224927;
     border-radius: 0.5rem;
     transition: background-color 0.2s;
     border: none;
@@ -78,7 +88,7 @@
   }
   
   .resetButton:hover {
-    background-color: #d1d5db;
+    background-color: #477e55;
   }
   
   .uploadIcon {
@@ -125,6 +135,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    color: #d1d5db; 
   }
   
   .spinner {
@@ -238,7 +249,7 @@
   }
   
   .sectionBlue {
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid #79d683;
   }
   
   .sectionPurple {
@@ -246,7 +257,7 @@
   }
   
   .sectionGray {
-    border-left: 4px solid #d1d5db;
+    border-left: 4px solid #b4cef4;
   }
   
   .sectionTitle {
@@ -279,7 +290,7 @@
     font-weight: bold;
     font-size: 1.125rem;
     padding: 0.25rem 0.5rem;
-    background-color: #fef3c7;
+    background-color: #c7edfe;
     border-radius: 0.25rem;
   }
   
@@ -351,7 +362,7 @@
   .scanAgainButton {
     width: 100%;
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(to right, #3b82f6, #4f46e5);
+    background: linear-gradient(to right, #08472a, #42573f);
     color: white;
     font-weight: 500;
     border-radius: 0.5rem;
@@ -362,15 +373,50 @@
   }
   
   .scanAgainButton:hover {
-    background: linear-gradient(to right, #2563eb, #4338ca);
+    background: linear-gradient(to right, #40945b, #247747);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   
+  .sampleBarcodeContainer {
+    display: flex;           /* Align items in a row */
+    flex-wrap: wrap;         /* Wrap to next line if needed */
+    gap: 1rem;               /* Space between images */
+    justify-content: center; /* Center the barcodes horizontally */
+    align-items: center;     /* Vertically center */
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1); /* optional subtle background */
+    border-radius: 0.75rem;            /* rounded corners */
+  }
+  
+  .barcodeImg {
+    width: 8rem;         /* uniform width for all barcodes */
+    height: auto;        /* preserve aspect ratio */
+    object-fit: contain; /* ensure full barcode fits */
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
+    transition: transform 0.2s;
+  }
+
+  .barcodeImg:hover {
+    transform: scale(1.05); /* small zoom on hover */
+  }
+
+  .sample {
+    margin-top: 2rem; 
+  }
+
+
+
+
+
+
+
   /* Footer */
   .footer {
     margin-top: 2rem;
     text-align: center;
     font-size: 0.875rem;
-    color: #4b5563;
+    color: #d1d5db;
   }
   

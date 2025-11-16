@@ -1,38 +1,63 @@
-import Image from "next/image";
-import "./home.css";
+"use client";
+
 import React from "react";
-import { FaApple, FaShoppingCart, FaTshirt } from "react-icons/fa";
+import "./home.css";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
+const HomePage = () => {
+  const router = useRouter();
+
+  const handleFood = () => {
+    router.push("/scanner");      // 
+  };
+
+  const handleLearnMore = () => {
+    router.push("/retail");    // or whatever page you want
+  };
+
+  const handleContact = () => {
+    router.push("/clothes");   // or whatever page you want
+  };
+
   return (
-    <div>
-      <div id="introbox">
-        <p id="introdesc">
-          Welcome to the one and only product barcode scanner! Here's how it works: First, you upload a picture of a barcode,
-          then you must select the category of the product you want to scan, then voila, you get detailed background info on your scanned product.
-        </p>
-      </div>
-      <div className="ccc">Select the barcode product category you want to scan.</div>
+    <div className="homepage-container">
+      <div className="content-wrapper">
 
-      <div id="product_type_links">
-
-        <div className="button-container">
-          <a href="app/food.tsx" className="iconlink">
-            <FaApple size={70} color="white" />
-            <span className="buttonlabel">Food</span>
-          </a>
-
-          <a href="INSERT_RETAIL_API_PAGE" className="iconlink">
-            <FaShoppingCart size={70} color="white" />
-            <span className="buttonlabel">Retail</span>
-          </a>
-
-          <a href="INSERT_CLOTHES_API_PAGE" className="iconlink">
-            <FaTshirt size={70} color="white" />
-            <span className="buttonlabel">Clothes</span>
-          </a>
+        <div className="welcome-container">
+          <div className="welcome-section">
+            <h1 className="welcome-title typewriter">
+              <span className="typewriter-text">SnapScan</span>
+              <span className="cursor">|</span>
+            </h1>
+          </div>
         </div>
+
+        <div className="description-section">
+          <ol className="description-list">
+            <li>Select the product category you want to scan.</li>
+            <li>Upload a picture of the barcode you want to scan.</li>
+            <li>Get detailed background info.</li>
+          </ol>
+        </div>
+
+        <div className="button-section">
+          <button className="btn btn-primary" onClick={handleFood}>
+            Groceries
+          </button>
+
+          <button className="btn btn-secondary" onClick={handleLearnMore}>
+            Retail (DLC)
+          </button>
+
+          <button className="btn btn-tertiary" onClick={handleContact}>
+            Clothes
+          </button>
+        </div>
+
+        <p className="stip">(retail and grocery functionality not implemented)</p>
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;

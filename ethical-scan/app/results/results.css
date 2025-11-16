@@ -1,3 +1,7 @@
+body {
+    background-color: #283618;
+}
+
 /* Container for centering */
 .results-container {
     display: flex;

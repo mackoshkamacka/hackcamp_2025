@@ -3,6 +3,14 @@
 import { useState, useRef } from 'react';
 import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library';
 import styles from './BarcodeScanner.module.css';
+import './BarcodeScanner.module.css'; 
+
+import Cheerio from "./media/bcCHEERIOS.png"; 
+import Hellman from "./media/bcHELLMAN.jpg"; 
+import Nutella from "./media/bcNUTELLA.png"; 
+import Philadelphia from "./media/bcPHILADELPHIA.png"; 
+import Silk from "./media/bcSILK.png"; 
+
 
 interface ScanResult {
   barcode: string;
@@ -228,7 +236,8 @@ export default function BarcodeScanner() {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <h1 className={styles.title}>
-            🛒 Barcode Ethical Scanner
+            {/* 🛒 Barcode Ethical Scanner */}
+            Barcode Ethical Scanner
           </h1>
           <p className={styles.subtitle}>
             Scan product barcodes to discover ethical ratings and product information
@@ -370,7 +379,7 @@ export default function BarcodeScanner() {
             {result.openFoodFacts && (
               <div className={`${styles.section} ${styles.sectionGreen}`}>
                 <h3 className={styles.sectionTitle}>
-                  <span className={styles.sectionIcon}>🍎</span>
+                  {/* <span className={styles.sectionIcon}>🍎</span> */}
                   Product Information
                 </h3>
                 <div className={styles.sectionContent}>
@@ -408,7 +417,7 @@ export default function BarcodeScanner() {
             {result.manufacturer && (
               <div className={`${styles.section} ${styles.sectionBlue}`}>
                 <h3 className={styles.sectionTitle}>
-                  <span className={styles.sectionIcon}>🏭</span>
+                  {/* <span className={styles.sectionIcon}>🏭</span> */}
                   Manufacturer
                 </h3>
                 <p className={styles.manufacturerText}>{result.manufacturer}</p>
@@ -463,7 +472,7 @@ export default function BarcodeScanner() {
             ) : result.manufacturer ? (
               <div className={`${styles.section} ${styles.sectionGray}`}>
                 <h3 className={styles.sectionTitle}>
-                  <span className={styles.sectionIcon}>ℹ️</span>
+                  {/* <span className={styles.sectionIcon}>ℹ️</span> */}
                   Ethical Rating
                 </h3>
                 <p className={styles.noResultText}>
@@ -491,6 +500,17 @@ export default function BarcodeScanner() {
             </div>
           </div>
         )}
+
+        <h2 className = {styles.sample}>Use some of the sample barcodes below to see functionality (or feel free to upload your own)</h2>
+        <div className={styles.sampleBarcodeContainer}>
+            <img className={styles.barcodeImg} src={Cheerio.src} alt="Cheerios" />
+            <img className={styles.barcodeImg} src={Hellman.src} alt="Hellman" />
+            <img className={styles.barcodeImg} src={Nutella.src} alt="Nutella" />
+            <img className={styles.barcodeImg} src={Philadelphia.src} alt="Philadelphia" />
+            <img className={styles.barcodeImg} src={Silk.src} alt="Silk" />
+        </div>
+
+        
 
         {/* Info Footer */}
         <div className={styles.footer}>

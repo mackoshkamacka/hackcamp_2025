@@ -1,0 +1,252 @@
+/* HomePage.css */
+
+/* Container */
+.homepage-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #344e4c 0%, #496e5b 100%);
+    padding: 20px;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    text-align: center;
+
+}
+
+/* Welcome Section */
+.welcome-container {
+
+    display: flex; 
+    justify-content: center;
+}
+
+
+.welcome-section {
+    text-align: center;
+    width:min-content;  
+     
+}
+
+.welcome-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex; 
+}
+
+/* --- Animation Keyframes --- */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hide-cursor {
+    to {
+        content: "";
+        opacity: 0;
+    }
+}
+
+/* --------------------------- */
+
+.welcome-subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Description Section */
+.description-section {
+    margin-bottom: 50px;
+    font-size: 22px;
+    color: white;
+}
+
+.description-list {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+/* --- Your requested spacing fix --- */
+.description-list {
+    list-style-position: outside;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.description-list li {
+    padding-left: 0;
+}
+
+.description-list li::marker {
+    font-size: 1.1rem;
+    margin-right: -6px;
+}
+
+/* ---------------------------------- */
+
+.description-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Button Section */
+.button-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #496e5b;
+}
+
+.btn-primary:hover {
+    background-color: #649e80;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary,
+.btn-tertiary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-tertiary:hover {
+    background-color: #d21515;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* TYPEWRITER ANIMATION (SMOOTH) */
+.typewriter {
+    position: relative;
+    display: flex;
+}
+
+/* Smoothly reveals width instead of jumpy steps() typing */
+.typewriter-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 10vw;
+    text-wrap:initial;
+    /* Smooth, pixel-by-pixel reveal */
+    width: 0;
+    animation: typingSmooth 3s ease-out forwards;
+}
+
+.cursor {
+    font-size: 10vw;
+}
+
+.stip {
+    color: rgb(182, 214, 194); 
+    margin-top: 2rem; 
+}
+
+
+
+/* Smooth width expansion */
+@keyframes typingSmooth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Blink cursor */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ---------------------------------- */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .description-list {
+        font-size: 3.5vw;
+        padding-left: 2rem;
+    }
+
+    .button-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
