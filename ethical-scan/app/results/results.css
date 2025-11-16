@@ -1,0 +1,78 @@
+/* Container for centering */
+.results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  /* Card */
+  .results-card {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Title */
+  .results-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Details section */
+  .results-section {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #444; 
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #5b5b5b;
+  }
+  
+  /* Description box */
+  .results-description {
+    background: #f5f7fa;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .p {
+    color: #444; 
+  }
+  
+  /* Button */
+  .back-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background: #3a76be;
+  }
+  
+  /* Fade animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
