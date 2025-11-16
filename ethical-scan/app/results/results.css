@@ -1,20 +1,29 @@
+body {
+    background-color: rgb(175, 135, 105);
+}
+
 /* Container for centering */
 .results-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(175, 135, 105);
     padding: 2rem;
+    height: 100%; 
   }
   
   /* Card */
   .results-card {
     width: 100%;
     max-width: 450px;
-    background: #ffffff;
-    border-radius: 1.2rem;
+    /* background: #b79f9f; */
+    background: #e6dbd0;
+    /* border-radius: 1.2rem; */
+    border-radius: 0.3rem;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.3s ease-in-out;
+    
   }
   
   /* Title */
@@ -24,6 +33,7 @@
     margin-bottom: 1.2rem;
     text-align: center;
     color: #333;
+    
   }
   
   /* Details section */
@@ -31,7 +41,7 @@
     font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #444; 
-  }
+  } 
   
   .label {
     font-weight: 600;
@@ -40,9 +50,10 @@
   
   /* Description box */
   .results-description {
-    background: #f5f7fa;
+    background: #d28b44;
     padding: 1rem;
-    border-radius: 0.8rem;
+    /* border-radius: 0.8rem; */
+    border-radius: 0.3rem;
     margin-bottom: 1.5rem;
     line-height: 1.4;
     color: #444;
@@ -57,17 +68,21 @@
   .back-button {
     width: 100%;
     padding: 0.8rem;
-    background: #4a90e2;
+    /* background: #4a90e2; */
+    background: #7d6a57;
     color: white;
     border: none;
     border-radius: 0.7rem;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.2s ease;
+
   }
   
   .back-button:hover {
-    background: #3a76be;
+    /* background: #3a76be; */
+    background: #85715d;
+    
   }
   
   /* Fade animation */

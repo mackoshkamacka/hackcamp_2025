@@ -29,6 +29,7 @@ export default function ResultsPage() {
                     Scan Another Item
                 </button>
             </div>
+            
         </div>
     );
 }
