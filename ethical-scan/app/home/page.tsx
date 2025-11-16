@@ -32,6 +32,8 @@ const HomePage = () => {
           </div>
         </div>
 
+        
+
         <div className="description-section">
           <ol className="description-list">
             <li>Select the product category you want to scan.</li>
@@ -46,15 +48,20 @@ const HomePage = () => {
           </button>
 
           <button className="btn btn-secondary" onClick={handleLearnMore}>
-            Retail (DLC)
+            Retail (day 1 DLC)
           </button>
 
           <button className="btn btn-tertiary" onClick={handleContact}>
-            Clothes
+            Clothes (Seg Fault)
           </button>
         </div>
 
         <p className="stip">(retail and grocery functionality not implemented)</p>
+        <div className = "brainrot">
+            <p className = "brainrotP">
+            We lowk made a barcode scanner that finds oppy brands ts. So bubba has the concept of  where the kirk-pilled companies lurk...
+            </p>
+        </div>
       </div>
     </div>
   );

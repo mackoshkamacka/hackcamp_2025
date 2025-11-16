@@ -122,6 +122,20 @@
     opacity: 0.95;
 }
 
+.brainrot {
+    
+    text-align: center;
+}
+
+.brainrotP {
+    font-size: 0.8rem; 
+    min-width: 400px; 
+    padding-top: 2rem;
+     
+}
+
+
+
 /* Button Section */
 .button-section {
     display: flex;
