@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+// next.config.ts
+const nextConfig: any = {
+    experimental: {
+      serverActions: true,
+    },
+    api: {
+      bodyParser: false, // allow formidable to handle file uploads
+    },
+  };
+  
+  export default nextConfig;
+  
