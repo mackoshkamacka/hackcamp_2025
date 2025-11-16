@@ -1,0 +1,376 @@
+/* BarcodeScanner.module.css */
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    padding: 2rem 1rem;
+  }
+  
+  .wrapper {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+  
+  .header {
+    /* text-center; */
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #4b5563;
+  }
+  
+  /* Upload Section */
+  .uploadCard {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .uploadLabel {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .uploadArea {
+    border: 2px dashed #d1d5db;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  
+  .uploadArea:hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+  
+  .imagePreview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .previewImage {
+    max-height: 24rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resetButton {
+    padding: 0.5rem 1rem;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .resetButton:hover {
+    background-color: #d1d5db;
+  }
+  
+  .uploadIcon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    color: #9ca3af;
+  }
+  
+  .uploadTitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  
+  .uploadSubtext {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .uploadHint {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+  
+  .fileInput {
+    display: none;
+  }
+  
+  /* Loading State */
+  .loadingCard {
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loadingHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.75rem;
+    color: #2563eb;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loadingText {
+    color: #1e40af;
+    font-weight: 500;
+  }
+  
+  .logContainer {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .logEntry {
+    font-size: 0.75rem;
+    color: #1d4ed8;
+  }
+  
+  /* Error State */
+  .errorCard {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .errorContent {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .errorIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #dc2626;
+    margin-top: 0.125rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  .errorTitle {
+    color: #991b1b;
+    font-weight: 500;
+  }
+  
+  .errorMessage {
+    color: #b91c1c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Results */
+  .resultsCard {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .resultHeader {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+  }
+  
+  .resultTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .barcodeDisplay {
+    color: #4b5563;
+    font-family: monospace;
+    background-color: #f3f4f6;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding-left: 1rem;
+  }
+  
+  .sectionGreen {
+    border-left: 4px solid #10b981;
+  }
+  
+  .sectionBlue {
+    border-left: 4px solid #3b82f6;
+  }
+  
+  .sectionPurple {
+    border-left: 4px solid #a855f7;
+  }
+  
+  .sectionGray {
+    border-left: 4px solid #d1d5db;
+  }
+  
+  .sectionTitle {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sectionIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .sectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #374151;
+  }
+  
+  .fieldLabel {
+    color: #111827;
+    font-weight: bold;
+  }
+  
+  .nutriscoreBadge {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #fef3c7;
+    border-radius: 0.25rem;
+  }
+  
+  .ingredientsText {
+    font-size: 0.875rem;
+  }
+  
+  .manufacturerText {
+    color: #374151;
+    font-size: 1.125rem;
+  }
+  
+  /* Links */
+  .externalLink {
+    display: inline-flex;
+    align-items: center;
+    color: #2563eb;
+    text-decoration: underline;
+    font-size: 1.125rem;
+    transition: color 0.2s;
+  }
+  
+  .externalLink:hover {
+    color: #1e40af;
+  }
+  
+  .linkIcon {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+  }
+  
+  .noResultText {
+    color: #4b5563;
+  }
+  
+  .manualSearchLink {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .manualSearchLink:hover {
+    color: #1e40af;
+  }
+  
+  .sourceLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-top: 0.25rem;
+    transition: color 0.2s;
+  }
+  
+  .sourceLink:hover {
+    color: #374151;
+  }
+  
+  .sourceLinkIcon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  
+  /* Scan Again Button */
+  .scanAgainButton {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, #3b82f6, #4f46e5);
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scanAgainButton:hover {
+    background: linear-gradient(to right, #2563eb, #4338ca);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
