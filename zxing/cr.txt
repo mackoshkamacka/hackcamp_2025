@@ -35,6 +35,23 @@ javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson
 java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp
 
 
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp.java
+
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar" BarcodeEthicalScannerApp
+
+
+compile
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:commons-text-1.10.0.jar" BarcodeEthicalScannerApp.java
+
+
+run
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar:jackson-databind-2.15.2.jar:jackson-core-2.15.2.jar:jackson-annotations-2.15.2.jar:commons-text-1.10.0.jar" BarcodeEthicalScannerApp
+
+javac -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar" BarcodeEthicalScannerImageGUI.java
+java -cp ".:core-3.5.2.jar:javase-3.5.2.jar:jsoup-1.16.1.jar" BarcodeEthicalScannerImageGUI
+
+
+
 
 api
 
